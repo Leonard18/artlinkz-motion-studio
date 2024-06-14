@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body {
+        @apply w-full overflow-x-hidden font-roboto bg-secondary;
+    }
+    .frame {
+        @apply block m-auto w-full lg:w-9/12 md:w-10/12;
+    }
+    .mobile-padding-x {
+        @apply md:px-0 px-5
+    }
+    .no-border {
+        @apply border-none outline-none focus:border-none focus:outline-none active:border-none active:outline-none;
+    }
+    .nav-link {
+        @apply text-white hover:text-primary text-base font-medium
+    }
+    .overlay-container {
+        @apply relative;
+    }
+    .overlay-img {
+        @apply w-full h-full object-cover;
+    }
+    .overlay-dim-content {
+        @apply absolute top-0 right-0 left-0 h-full w-full;
+    }
+    .overlay-content {
+        @apply absolute top-0 right-0 left-0 h-full w-full z-10;
+    }
+    .half-overlay {
+        @apply bg-black/50;
+    }
+    .studio {
+        letter-spacing: 4.5rem;
+        @apply border-b border-b-primary;
+    }
+    .primary-btn {
+        @apply bg-primary text-white hover:bg-primary/85 text-xl;
+    }
+    .theme-rounded {
+        @apply rounded-full
+    }
+    .btn-lg {
+        @apply px-5 py-4;
+    }
+
+    .modal {
+        @apply h-screen w-screen bg-black/70 fixed top-0 right-0 left-0 z-20;
+    }
+    .modal .content-container {
+        @apply w-full h-full flex justify-end; 
+    }
+    .modal .content {
+        @apply lg:w-4/12 md:w-5/12 w-11/12 h-full bg-secondary;
+    }
+    .modal .header {
+        @apply flex flex-row items-center justify-between space-x-5 p-5 shadow-md;
+    }
+    .modal .title {
+        @apply text-3xl font-medium text-primary;
+    }
+    .close-button {
+        @apply border border-gray-400 text-gray-400 hover:bg-gray-400 hover:text-gray-950 px-4 py-2 rounded-md;
+    }
+    .service-card {
+        @apply shadow-2xl shadow-primary/50 hover:shadow-none transition-all duration-700 ease-in-out;
+    }
+    .service-card .image {
+        @apply w-full h-80 object-cover rounded-t-md;
+    }
+    .service-card .content {
+        @apply border border-gray-400 p-5 border-t-0 rounded-b-md;
+    }
+    .service-card .title {
+        @apply text-xl font-medium text-white text-center pb-2 mb-2 border-b border-b-primary;
+    }
+    .service-card .desc {
+        @apply text-sm text-white;
+    }
+}
